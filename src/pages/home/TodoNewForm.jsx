@@ -5,7 +5,7 @@ export function TodoNewForm() {
   return (
     <form className="new-item-form">
             <div className="form-row">
-                <label>Novo Item</label>
+                <label htmlFor="item">Novo Item</label>
                 <input
                     id="item"
                     type="text"
