@@ -1,3 +1,4 @@
+import "../../App.css"
 
 export function TodoItem() {
 
@@ -9,7 +10,7 @@ export function TodoItem() {
             />
             Titulo
         </label>
-        <button>
+        <button className="btn btn-danger">
             -
         </button>
       </li>
