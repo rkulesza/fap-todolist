@@ -1,6 +1,6 @@
 import { TodoList } from "./pages/home/TodoList"
 import { AddTodo } from "./pages/home/AddTodo"
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -26,8 +26,20 @@ function App(){
       title: "Become a Web Developer"
     }
   ];
-  const [todos, setTodos] = useState(data);
+  //const [todos, setTodos] = useState(data);
 
+  const [todos, setTodos] = useState( () =>{
+    const localValues = localStorage.getItem("TODOS")
+    if (localValues == null)  { return [] }
+    return JSON.parse(localValues)
+  })
+
+  useEffect( () => {
+    console.log('useEffect');
+    localStorage.setItem("TODOS", JSON.stringify(todos))
+  }, [todos])
+
+   
   const handleAddTodo = (todo) => {
     setTodos((prevTodos) => [
       ...prevTodos,
