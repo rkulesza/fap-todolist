@@ -2,6 +2,8 @@ import { TodoList } from "./pages/home/TodoList"
 import { AddTodo } from "./pages/home/AddTodo"
 import {useState} from 'react'
 import {v4 as uuidv4} from 'uuid'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import "./App.css"
 
 function App(){

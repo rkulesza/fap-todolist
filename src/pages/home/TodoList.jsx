@@ -1,4 +1,7 @@
-import "../../App.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faTrash, faBookBookmark } from '@fortawesome/free-solid-svg-icons'
+
+//https://fontawesome.com/search?o=r&m=free&s=solid
 
 export function TodoList({ todos, handleDeleteTodo }) {
     const handleClick = (todo) => () => {
@@ -16,7 +19,7 @@ export function TodoList({ todos, handleDeleteTodo }) {
                 key={todo.id}
               >
                 <span>{todo.title}</span>
-                <i className="delete fa fa-trash" onClick={handleClick(todo)}></i>
+                <FontAwesomeIcon icon={faTrash} onClick={handleClick(todo)} />
               </li>
             ))}
           </ul>

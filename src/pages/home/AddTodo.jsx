@@ -32,7 +32,7 @@ export function AddTodo({handleAddTodo}) {
             className="form-control mr-2"
             value={todo}
           />
-          <button id="add-btn" className="btn btn-add" onClick={handleClick}>
+          <button id="add-btn" className="btn btn-primary" onClick={handleClick}>
             Add
           </button>
         </div>
