@@ -1,0 +1,21 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.btn-add {
+  color: white;
+  background-color: #61dafb;
+}
+.btn-add:hover{
+  color: white;
+  background-color: #21232b;
+  box-shadow: 0 0 3px #21232b;
+}
+.fa-trash {
+  color: #A0A0A0;
+  cursor: pointer;
+}
+.fa-trash:hover {
+  color: #808080;
+}
