@@ -1,12 +1,12 @@
 import { TodoList } from "./TodoList"
-import { AddTodo } from "./AddTodo"
+import { TodoAdd } from "./TodoAdd"
 import {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import "./Home.css"
+import "./TodoHome.css"
 
-const Home = () => {
+const TodoHome = () => {
   //const [todos, setTodos] = useState(data);
 
   const [todos, setTodos] = useState( () =>{
@@ -39,11 +39,11 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h4 className="mb-3">Home</h4>
-      <AddTodo handleAddTodo={handleAddTodo} />
+      <h4 className="mb-3"></h4>
+      <TodoAdd handleAddTodo={handleAddTodo} />
       <TodoList todos={todos} handleDeleteTodo={handleDeleteTodo} />
     </div>
   );
 };
 
-export default Home;
+export default TodoHome;

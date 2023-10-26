@@ -11,7 +11,7 @@ export function TodoList({ todos, handleDeleteTodo }) {
     return (
       <div className="row">
         <div className="col">
-          <h5>Tarefas</h5>
+          <h5>Tasks</h5>
           <ul id="todos" className="list-group">
             {todos.map((todo) => (
               <li

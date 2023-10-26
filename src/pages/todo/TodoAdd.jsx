@@ -1,7 +1,7 @@
 import "../../App.css"
 import {useState} from 'react'
 
-export function AddTodo({handleAddTodo}) {
+export function TodoAdd({handleAddTodo}) {
   const [todo, setTodo] = useState("");
 
   const handleChange = (e) => {
@@ -40,7 +40,7 @@ export function AddTodo({handleAddTodo}) {
     </div>
   );
 };
-export default AddTodo
+export default TodoAdd;
 
 
 
