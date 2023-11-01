@@ -11,13 +11,13 @@ import Container from "@mui/material/Container";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 //sem o hook import { AuthContext } from "../../contexts/auth"; 
 //sem o hookimport { useContext } from "react";
-import useAuth from "../../hooks/useAuth";
-
+//import useAuth from "../../hooks/useAuth";
+import { useAuthFB } from "../../contexts/AuthFBContext";
 
 export const LoginPage = () => {
 
   //sem o hookconst context = useContext(AuthContext);
-  const { signin, user } = useAuth();
+  const { signin, user } = useAuthFB();
   const navigate = useNavigate();
 
 

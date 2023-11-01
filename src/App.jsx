@@ -1,9 +1,11 @@
 import RouterApp from "./RouterApp";
-import { AuthProvider } from "./contexts/auth";
+//import { AuthProvider } from "./contexts/auth";
+import AuthFBProvider from "./contexts/AuthFBContext";
 
 const App = () => (
-    <AuthProvider>
+    <AuthFBProvider>
       <RouterApp/>
-    </AuthProvider>
+    </AuthFBProvider>
 );
 export default App;
+
