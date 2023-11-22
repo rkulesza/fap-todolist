@@ -21,12 +21,15 @@ export const LoginPage = () => {
   const navigate = useNavigate();
 
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    signin(data.get("email"),data.get("password"));
-    if (user) {
-        navigate("/authenticated")
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      console.log(event)
+      const data = new FormData(event.currentTarget);
+      await signin(data.get("email"),data.get("password"));
+      navigate("/authenticated");
+    }  catch (error) {
+      console.log(error.code);
     }
 
   };
